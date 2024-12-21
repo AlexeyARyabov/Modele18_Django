@@ -17,10 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from task2.views import index, Index2
+from task3.views import ManePage, ls_books, Cart
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('class/', Index2.as_view())
+    path('class/', Index2.as_view()),
+    path('main/', ManePage.as_view()),
+    path('main/books/', ls_books),
+    path('main/cart/', Cart.as_view()),
 ]

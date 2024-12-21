@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h1>Каталог книг</h1>
+    <ul>
+        {% for book in books %}
+        <li>{{ book.author }}, {{ book.name }}. <button>Купить</button></li>
+        {% endfor %}
+    </ul>
+    <a href="/main"><button>Вернуться</button></a>
+</body>
+</html>
